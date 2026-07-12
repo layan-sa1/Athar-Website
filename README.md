@@ -1,6 +1,6 @@
 # 🌱 Athar - Eco-Friendly E-Commerce Platform
 
-Athar is a full-stack web application developed as a **Web Systems course project**. It's dedicated to promoting sustainable and eco-friendly products while demonstrating comprehensive full-stack web development concepts.
+Athar is a full-stack web application developed as a Web Systems course project. It's dedicated to promoting sustainable and eco-friendly products while demonstrating comprehensive full-stack web development concepts.
 
 ## ✨ Features
 
