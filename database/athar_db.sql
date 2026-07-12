@@ -1,0 +1,39 @@
+DROP DATABASE IF EXISTS athar_db;
+CREATE DATABASE athar_db;
+USE athar_db;
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    picture VARCHAR(255) NOT NULL,
+    stock INT NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    category VARCHAR(100),
+    features TEXT,
+    short_description VARCHAR(255)
+);
+
+CREATE TABLE admins (
+    admin_id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+INSERT INTO admins (full_name, email, password) VALUES ('Athar Admin', 'admin@athar.com', '1234');
+
+INSERT INTO products (name, description, picture, stock, price, category, features, short_description) VALUES
+('Bamboo Toothbrush','Eco-friendly bamboo toothbrush designed to reduce plastic waste and promote sustainable living. The handle is made from 100% natural bamboo, fully biodegradable and compostable. Soft BPA-free bristles are gentle on teeth and gums while providing effective cleaning.','toothbrush.jpg',50,25.00,'Bamboo Products','100% natural bamboo handle|Soft BPA-free bristles|Fully biodegradable|Plastic-free packaging|Eco-certified materials|Comfortable ergonomic grip','A plastic-free alternative for your daily routine, made from 100% natural bamboo. Gentle on teeth, kind to the planet.'),
+('Reusable Bottle','High-quality stainless steel reusable water bottle that helps eliminate single-use plastic bottles from your daily routine. Keeps drinks cold for 24 hours and hot for 12 hours with double-wall insulation. Lightweight, durable, and BPA-free for safe everyday use.','bottle.jpg',40,45.00,'Water Bottles','Food-grade stainless steel|Keeps cold 24h / hot 12h|Leak-proof lid|BPA-free|Lightweight & durable|Eco-certified materials','Stay hydrated sustainably with this sleek stainless steel bottle. Keeps drinks cold or hot and eliminates single-use plastic.'),
+('Reusable Bag','Durable reusable shopping bag made from organic cotton that significantly reduces plastic bag waste every time you shop. Strong enough to carry up to 15 kg of groceries and folds compactly into a pocket size. Machine washable and designed to last for hundreds of uses.','bag.jpg',60,20.00,'Reusable Bags','Organic cotton material|Holds up to 15 kg|Folds into pocket size|Machine washable|Reusable hundreds of times|Plastic-free packaging','A sturdy organic cotton bag built to replace hundreds of plastic bags. Folds small, carries big, lasts for years.'),
+('Organic Soap','Handcrafted organic soap made with 100% natural plant-based ingredients, free from synthetic chemicals, parabens, and sulfates. Gentle on sensitive skin and suitable for daily use by the whole family. Each bar is wrapped in recycled paper and is cruelty-free and vegan certified.','soap.jpg',35,18.00,'Organic Skincare','100% natural ingredients|Paraben & sulfate free|Suitable for sensitive skin|Cruelty-free & vegan|Recycled paper packaging|Handcrafted in small batches','Handcrafted from pure plant-based ingredients with no harsh chemicals. Gentle on your skin and safe for the environment.'),
+('Reusable Straws','Set of 6 food-grade stainless steel reusable straws — a direct replacement for single-use plastic straws that pollute our oceans. Comes with a cleaning brush and a cotton carry pouch for easy transport. Dishwasher safe and suitable for both hot and cold drinks.','straws.jpg',45,15.00,'Eco Accessories','Set of 6 straws|Food-grade stainless steel|Includes cleaning brush|Cotton carry pouch included|Dishwasher safe|Hot & cold drink safe','Say goodbye to plastic straws with this set of stainless steel reusables. Perfect for everyday drinks at home or on the go.'),
+('Eco Cleaner','Plant-based multi-surface eco cleaner that effectively cleans your home without harsh chemicals or toxic residues. Biodegradable formula is safe for your family, pets, and the environment. Works on kitchen surfaces, bathrooms, and floors — one concentrated bottle goes a long way.','cleaner.jpg',30,30.00,'Eco Cleaning','Plant-based formula|Biodegradable ingredients|No toxic chemicals|Multi-surface use|Concentrated formula|Recyclable bottle','A powerful plant-based cleaner that tackles dirt without toxic chemicals. Safe for your home, your family, and the earth.'),
+('Bamboo Cutlery Set','Portable bamboo cutlery set including fork, knife, spoon, and chopsticks — perfect for replacing disposable plastic cutlery on the go. Comes in a compact cotton roll-up pouch for easy carrying in your bag. Lightweight, naturally antibacterial, and fully biodegradable.','cutlery.jpg',40,22.00,'Eco Accessories','Fork, knife, spoon & chopsticks|100% natural bamboo|Cotton roll-up pouch|Naturally antibacterial|Lightweight & portable|Plastic-free packaging','Take your eco habits on the go with this portable bamboo cutlery set. Lightweight, naturally antibacterial, and plastic-free.'),
+('Reusable Coffee Cup','Stylish double-wall insulated reusable coffee cup designed to replace disposable paper and plastic cups in your daily coffee routine. Keeps drinks hot for up to 4 hours and fits standard coffee machine sizes and most car cup holders. BPA-free with a leak-proof lid included.','coffee_cup.jpg',35,28.00,'Reusable Cups','Double-wall insulated|Keeps hot up to 4 hours|Leak-proof lid|Fits coffee machines|BPA-free materials|Eco-certified','Your daily coffee, without the daily waste. This insulated cup keeps drinks hot and ditches disposable cups for good.'),
+('Eco Food Containers','Set of 3 eco-friendly food containers made from sustainable materials to replace single-use plastic wrap and disposable containers. Airtight lids keep food fresh longer and the containers are both microwave and dishwasher safe. Stackable design saves space in your kitchen or bag.','containers.jpg',30,35.00,'Kitchen','Set of 3 containers|Airtight lids|Microwave safe|Dishwasher safe|Stackable design|BPA-free materials','Keep food fresh and ditch plastic wrap with these airtight eco containers. Microwave-safe, stackable, and built to last.'),
+('Natural Loofah Sponge','100% natural loofah sponge grown and dried without chemicals — a fully biodegradable alternative to synthetic plastic sponges. Naturally exfoliates skin and effectively cleans dishes, making it a versatile zero-waste tool. Fully compostable and lasts 4 to 6 weeks with proper care.','loofah.jpg',50,12.00,'Organic Skincare','100% natural loofah|Fully biodegradable|Chemical-free processing|Dual use: body & dishes|Compostable|Lasts 4-6 weeks','A 100% natural loofah that exfoliates skin and cleans dishes — zero plastic, zero waste, fully compostable.'),
+('Compostable Trash Bags','Certified compostable trash bags made from plant-based materials that break down naturally unlike conventional plastic bags. Strong enough for everyday kitchen and bathroom waste without leaking or tearing. Pack of 30 bags certified to international compostability standards with no toxic residues.','trash_bags.jpg',45,20.00,'Eco Cleaning','Plant-based materials|Certified compostable|Strong & leak-resistant|Kitchen & bathroom use|Pack of 30 bags|No toxic residues','Strong enough for daily waste, kind enough for the planet. These bags break down naturally leaving no toxic trace.'),
+('Eco Laundry Detergent','Concentrated eco laundry detergent made from plant-derived surfactants that cleans effectively without phosphates or synthetic fragrances. Suitable for all fabric types and washing temperatures while being gentle on sensitive skin. Comes in recyclable cardboard packaging with no plastic bottle needed.','detergent.jpg',25,32.00,'Eco Cleaning','Plant-derived formula|Phosphate-free|All fabric types|Gentle on sensitive skin|Concentrated formula|Cardboard packaging','Clean clothes without compromising the environment. This plant-based formula is gentle on fabrics and tough on stains.');
+
