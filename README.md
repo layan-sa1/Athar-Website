@@ -20,17 +20,17 @@ Athar is a full-stack web application developed as a Web Systems course project.
 
 ## 📁 Project Structure
 Athar/
-├── images/          (Product images)
-├── css/             (Stylesheets)
-├── includes/        (Database & header/footer includes)
-├── database/        (SQL schema)
-├── uploads/         (User uploads)
-├── home.php         (Homepage)
-├── products.php     (Product listing)
-├── cart.php         (Shopping cart)
-├── checkout.php     (Checkout process)
-├── admin_login.php  (Admin authentication)
-└── manage_products.php (Product management)
+- **images/** — Product images
+- **css/** — Stylesheets
+- **includes/** — Database connection & header/footer
+- **database/** — SQL schema (athar_db.sql)
+- **uploads/** — User uploads
+- **home.php** — Homepage
+- **products.php** — Product listing page
+- **cart.php** — Shopping cart
+- **checkout.php** — Checkout process
+- **admin_login.php** — Admin authentication
+- **manage_products.php** — Product management
 
 ## 🎓 Learning Outcomes
 
